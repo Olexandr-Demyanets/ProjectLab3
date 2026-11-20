@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ProjectLab3.Models"
+             x:Class="ProjectLab3.MainPage"
+             Title="Диспетчер JSON: студенти">
+
+    <Grid RowDefinitions="Auto,Auto,Auto,*,Auto" Padding="16" RowSpacing="8">
+
+        <FlexLayout Grid.Row="0" Wrap="Wrap" JustifyContent="Start">
+            <Button Text="Відкрити JSON" Clicked="OnOpenClicked" Margin="0,0,8,8" />
+            <Button Text="Завантажити з файлу" Clicked="OnReloadClicked" Margin="0,0,8,8" />
+            <Button Text="Зберегти у файл" Clicked="OnSaveClicked" Margin="0,0,8,8" />
+            <Button Text="Додати" Clicked="OnAddClicked" Margin="0,0,8,8" />
+            <Button Text="Редагувати" Clicked="OnEditClicked" Margin="0,0,8,8" />
+            <Button Text="Видалити" Clicked="OnDeleteClicked" Margin="0,0,8,8" />
+            <Button Text="Про програму" Clicked="OnAboutClicked" Margin="0,0,8,8" />
+        </FlexLayout>
+
+        <FlexLayout Grid.Row="1" Wrap="Wrap" JustifyContent="Start" AlignItems="Center">
+            <Entry x:Name="NameEntry" Placeholder="Частина ПІБ" WidthRequest="220" Margin="0,0,8,8" />
+            <Picker x:Name="GroupPicker" Title="Група" WidthRequest="170" Margin="0,0,8,8" />
+            <Entry x:Name="MinAverageEntry" Placeholder="Сер. бал від" Keyboard="Numeric"
+                   WidthRequest="130" Margin="0,0,8,8" />
+            <Picker x:Name="FormPicker" Title="Форма навчання" WidthRequest="170" Margin="0,0,8,8" />
+            <Button Text="Знайти" Clicked="OnSearchClicked" Margin="0,0,8,8" />
+            <Button Text="Скинути пошук" Clicked="OnResetSearchClicked" Margin="0,0,8,8" />
+        </FlexLayout>
+
+        <Grid Grid.Row="2"
+              ColumnDefinitions="40,3*,*,50,*,*,*,70"
+              ColumnSpacing="8" Padding="8,6"
+              BackgroundColor="{AppThemeBinding Light=#ECECEC, Dark=#2B2B2B}">
+            <Label Grid.Column="0" Text="№" FontAttributes="Bold" />
+            <Label Grid.Column="1" Text="ПІБ" FontAttributes="Bold" />
+            <Label Grid.Column="2" Text="Група" FontAttributes="Bold" />
+            <Label Grid.Column="3" Text="Курс" FontAttributes="Bold" />
+            <Label Grid.Column="4" Text="Факультет" FontAttributes="Bold" />
+            <Label Grid.Column="5" Text="Форма" FontAttributes="Bold" />
+            <Label Grid.Column="6" Text="Стипендія" FontAttributes="Bold" />
+            <Label Grid.Column="7" Text="Сер. бал" FontAttributes="Bold" />
+        </Grid>
+
+        <CollectionView Grid.Row="3"
+                        x:Name="StudentsList"
+                        SelectionMode="Single"
+                        EmptyView="Список порожній або за критеріями нічого не знайдено">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Student">
+                    <Grid ColumnDefinitions="40,3*,*,50,*,*,*,70"
+                          ColumnSpacing="8" Padding="8,6">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal" />
+                                <VisualState Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor"
+                                                Value="{AppThemeBinding Light=#D6E4FF, Dark=#34466B}" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <Label Grid.Column="0" Text="{Binding Id}" />
+                        <Label Grid.Column="1" Text="{Binding NameWithRole}" />
+                        <Label Grid.Column="2" Text="{Binding Group}" />
+                        <Label Grid.Column="3" Text="{Binding Course}" />
+                        <Label Grid.Column="4" Text="{Binding Faculty}" />
+                        <Label Grid.Column="5" Text="{Binding FormOfStudy}" />
+                        <Label Grid.Column="6" Text="{Binding ScholarshipText}" />
+                        <Label Grid.Column="7" Text="{Binding AverageGrade, StringFormat='{0:F1}'}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label Grid.Row="4" x:Name="StatusLabel" FontSize="12" Text="Файл не відкрито" />
+    </Grid>
+</ContentPage>

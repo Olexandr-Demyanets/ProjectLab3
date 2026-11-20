@@ -1,0 +1,164 @@
+[
+  {
+    "Id": 1,
+    "FullName": "Іваненко Петро Олегович",
+    "Faculty": "ФІТ",
+    "Department": "Програмної інженерії",
+    "Course": 2,
+    "Group": "ПІ-21",
+    "IsBudget": true,
+    "Scholarship": "звичайна",
+    "IsHeadman": true,
+    "Disciplines": [
+      { "Name": "Програмування", "Grade": 92 },
+      { "Name": "Вища математика", "Grade": 78 },
+      { "Name": "Англійська мова", "Grade": 85 }
+    ]
+  },
+  {
+    "Id": 2,
+    "FullName": "Шевчук Андрій Васильович",
+    "Faculty": "ФІТ",
+    "Department": "Програмної інженерії",
+    "Course": 2,
+    "Group": "ПІ-21",
+    "IsBudget": true,
+    "Scholarship": "підвищена",
+    "IsHeadman": false,
+    "Disciplines": [
+      { "Name": "Програмування", "Grade": 85 },
+      { "Name": "Вища математика", "Grade": 92 },
+      { "Name": "Англійська мова", "Grade": 98 },
+      { "Name": "Алгоритми і структури даних", "Grade": 96 }
+    ]
+  },
+  {
+    "Id": 3,
+    "FullName": "Литвиненко Богдан Миколайович",
+    "Faculty": "ФІТ",
+    "Department": "Програмної інженерії",
+    "Course": 2,
+    "Group": "ПІ-21",
+    "IsBudget": false,
+    "Scholarship": null,
+    "IsHeadman": false,
+    "Disciplines": [
+      { "Name": "Програмування", "Grade": 60 },
+      { "Name": "Вища математика", "Grade": 75 },
+      { "Name": "Англійська мова", "Grade": 67 }
+    ]
+  },
+  {
+    "Id": 4,
+    "FullName": "Олійник Софія Петрівна",
+    "Faculty": "ФІТ",
+    "Department": "Програмної інженерії",
+    "Course": 2,
+    "Group": "ПІ-21",
+    "IsBudget": false,
+    "Scholarship": null,
+    "IsHeadman": false,
+    "Disciplines": [
+      { "Name": "Програмування", "Grade": 60 },
+      { "Name": "Вища математика", "Grade": 62 },
+      { "Name": "Англійська мова", "Grade": 60 }
+    ]
+  },
+  {
+    "Id": 5,
+    "FullName": "Савченко Ірина Олександрівна",
+    "Faculty": "ФІТ",
+    "Department": "Комп'ютерних наук",
+    "Course": 3,
+    "Group": "КН-31",
+    "IsBudget": true,
+    "Scholarship": "підвищена",
+    "IsHeadman": true,
+    "Disciplines": [
+      { "Name": "Програмування", "Grade": 90 },
+      { "Name": "Вища математика", "Grade": 95 },
+      { "Name": "Англійська мова", "Grade": 100 },
+      { "Name": "Бази даних", "Grade": 97 }
+    ]
+  },
+  {
+    "Id": 6,
+    "FullName": "Коваленко Марія Ігорівна",
+    "Faculty": "ФІТ",
+    "Department": "Комп'ютерних наук",
+    "Course": 3,
+    "Group": "КН-31",
+    "IsBudget": false,
+    "Scholarship": null,
+    "IsHeadman": false,
+    "Disciplines": [
+      { "Name": "Програмування", "Grade": 64 },
+      { "Name": "Вища математика", "Grade": 60 },
+      { "Name": "Англійська мова", "Grade": 75 }
+    ]
+  },
+  {
+    "Id": 7,
+    "FullName": "Асієв Олексій Денисович",
+    "Faculty": "ФІТ",
+    "Department": "Комп'ютерних наук",
+    "Course": 3,
+    "Group": "КН-31",
+    "IsBudget": false,
+    "Scholarship": null,
+    "IsHeadman": false,
+    "Disciplines": [
+      { "Name": "Програмування", "Grade": 64 },
+      { "Name": "Вища математика", "Grade": 60 },
+      { "Name": "Англійська мова", "Grade": 75 }
+    ]
+  },
+  {
+    "Id": 8,
+    "FullName": "Мельник Дмитро Андрійович",
+    "Faculty": "ЕФ",
+    "Department": "Фінансів",
+    "Course": 1,
+    "Group": "ФН-11",
+    "IsBudget": true,
+    "Scholarship": "підвищена",
+    "IsHeadman": true,
+    "Disciplines": [
+      { "Name": "Економічна теорія", "Grade": 94 },
+      { "Name": "Вища математика", "Grade": 93 },
+      { "Name": "Англійська мова", "Grade": 95 }
+    ]
+  },
+  {
+    "Id": 9,
+    "FullName": "Ткаченко Анастасія Вікторівна",
+    "Faculty": "ЕФ",
+    "Department": "Фінансів",
+    "Course": 1,
+    "Group": "ФН-11",
+    "IsBudget": true,
+    "Scholarship": "звичайна",
+    "IsHeadman": false,
+    "Disciplines": [
+      { "Name": "Економічна теорія", "Grade": 74 },
+      { "Name": "Вища математика", "Grade": 90 },
+      { "Name": "Англійська мова", "Grade": 81 }
+    ]
+  },
+  {
+    "Id": 10,
+    "FullName": "Бондаренко Олена Сергіївна",
+    "Faculty": "ЕФ",
+    "Department": "Фінансів",
+    "Course": 1,
+    "Group": "ФН-11",
+    "IsBudget": false,
+    "Scholarship": null,
+    "IsHeadman": false,
+    "Disciplines": [
+      { "Name": "Економічна теорія", "Grade": 87 },
+      { "Name": "Вища математика", "Grade": 63 },
+      { "Name": "Англійська мова", "Grade": 74 }
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectLab3.Views.AboutPage"
+             Title="Про програму">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="10" MaximumWidthRequest="640">
+
+            <Label Text="Про програму" FontSize="22" FontAttributes="Bold" />
+
+            <Label Text="Лабораторна робота № 3. Диспетчер для JSON" FontAttributes="Bold" />
+
+            <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto"
+                  ColumnSpacing="12" RowSpacing="6">
+                <Label Grid.Row="0" Grid.Column="0" Text="ПІБ:" FontAttributes="Bold" />
+                <Label Grid.Row="0" Grid.Column="1" Text="—" />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Курс:" FontAttributes="Bold" />
+                <Label Grid.Row="1" Grid.Column="1" Text="—" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Група:" FontAttributes="Bold" />
+                <Label Grid.Row="2" Grid.Column="1" Text="—" />
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Рік:" FontAttributes="Bold" />
+                <Label Grid.Row="3" Grid.Column="1" Text="2026" />
+            </Grid>
+
+            <Label Text="Опис" FontAttributes="Bold" Margin="0,8,0,0" />
+            <Label Text="Програма відкриває JSON-файл зі списком студентів, показує його в таблиці, дозволяє додавати, редагувати та видаляти студентів через окрему форму, зберігає зміни у файл і шукає студентів за допомогою LINQ: за частиною ПІБ, групою, мінімальним середнім балом і формою навчання." />
+
+            <Button Text="Закрити" Clicked="OnCloseClicked" HorizontalOptions="Start" Margin="0,12,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
